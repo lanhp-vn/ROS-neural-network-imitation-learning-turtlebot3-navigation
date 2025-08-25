@@ -1,0 +1,14 @@
+# ROS bag files (can be very large)
+*.bag
+
+# Build directories
+build/
+devel/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# ROS logs
+.catkin_workspace
+.rosinstall
