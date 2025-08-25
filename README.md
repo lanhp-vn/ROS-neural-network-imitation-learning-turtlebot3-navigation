@@ -31,7 +31,7 @@ Data Collection → Preprocessing → NN Training → Hybrid Controller → Navi
 ```
 /
 ├── ros_workspace/
-│   ├── Recorded_Robot.bag          # ROS bag with recorded data
+│   ├── Recorded_Robot.bag          # ROS bag with recorded data (excluded from git due to size)
 │   ├── model.h5                    # Trained neural network model
 │   ├── training_data.csv           # Preprocessed dataset
 │   ├── scripts/
@@ -110,6 +110,11 @@ rosrun nn_turtlebot goals_sender.py
 ```bash
 rosbag record -O Recorded_Robot /gazebo/model_states /cmd_vel /move_base/goal
 ```
+
+**Note**: The original `Recorded_Robot.bag` file (1.8GB) has been excluded from this repository due to GitHub's file size limits. Users can either:
+- Use the preprocessed `training_data.csv` directly for training
+- Record your own bag file following the above process
+- Update the path in `preprocess_bag.py` if using a different bag file
 
 ### Data Collection Details
 
